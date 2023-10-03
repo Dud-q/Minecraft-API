@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Minecraft Information</title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/Images/Minecraft_logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/94/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/InventivetalentDev/MineRender@1.4.6/dist/skin.min.js"></script>
+</head>
+    <body>
+        <div id="temp">
+            <input type="text" id="block_input" list="possibleBlockList">
+            <datalist id="possibleBlockList"></datalist>
+            <button id="btn1">Block Button</button>
+        </div>
+        
+        <img src="Images/Corners/RightTopCorner.png" alt="Corner" id="RightTopCorner">
+        <img src="Images/Corners/LeftTopCorner.png" alt="Corner" id="LeftTopCorner">
+        <img src="Images/Corners/RighDowsCorner.png" alt="Corner" id="RightDownCorner">
+        <img src="Images/Corners/LeftDownCorner.png" alt="Corner" id="LeftDownCorner">
+        
+        <header>
+            <img src="Images/Images/Minecraft_logo.png" id="minecraftLogoImg">
+            <div class="spamer3"></div>
+            <div>Minecraft Tracker</div>
+        </header>
+        
+        <div class="spamer2"></div>
+        
+        <section>
+            <button id="skinPageBTN" class="mainButton" onclick="toggleSkinPage()">Players Skins</button>
+            <div class="spamer1"></div>
+            <button id="entityPageBTN" class="mainButton" onclick="toggleEntitiesPage()">Entities</button>
+            <div class="spamer1"></div>
+            <button id="itemPageBTN" class="mainButton" onclick="toggleItemsPage()">Blocks & Items</button>
+        </section>
+        
+        
+        <article id="skinsPage">
+            <div onclick="toggleSkinPage()" class="homeButton">
+                <img src="Images/Images/Home.png" alt="Home" class="homeImg">
+            </div>
+            <input type="text" id="playerInput" placeholder="Player's Nick">
+            <input type="button" id="searchPlayerInput" value="Search">
+            <div id="skinsPageDown">
+                <div id="divForSkin"></div>
+                <div class="spamer4"></div>
+                <div id="divForPlayerStats">
+                    <div id="UUIDDiv">
+                        <div id="random1">UUID:</div>
+                        <div id="UUIDoutput"></div>
+                        <div id="copyUUID">Copy</div>
+                    </div>
+                    <div id="downloadSkin">
+                        <div class="spamer5"></div>
+                        <div id="downloadSkinImg1">
+                            <img src="Images/Images/download.png" alt="download" id="downloadSkinImg2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        
+        <article id="entitiesPage">
+            <div onclick="toggleEntitiesPage()" class="homeButton">
+                <img src="Images/Images/Home.png" alt="Home" class="homeImg">
+            </div>
+            <input type="text" id="entitiesInput" placeholder="Entity Name" list="possibleEntityList">
+            <datalist id="possibleEntityList"></datalist>
+            <input type="button" id="searchEntitiesInput" value="Search">
+            <div id="entitiesPageDown">
+                <div id="divForEntity">
+                    <img src="" id="entityOutput">
+                </div>
+                <div class="spamer4"></div>
+                <div id="divForEntityStats">
+                    <div id="entityStatsHeader">
+                      
+                    </div>
+                    <div id="divForName">
+                    
+                    </div>
+                    <div id="divForID">
+                       
+                    </div>
+                    <div id="divForHP">
+            
+                    </div>
+                    <div id="divForCategory">
+                       
+                    </div>
+                    <div id="divForSize">
+                       
+                    </div>
+                </div>
+            </div>
+            
+        </article>
+        
+        
+        <article id="itemsPage">
+            <div onclick="toggleItemsPage()" class="homeButton">
+                <img src="Images/Images/Home.png" alt="Home" class="homeImg">
+            </div>
+            <input type="text" id="itemsInput" placeholder="Item Name" list="possibleBlocksList">
+            <datalist id="possibleBlocksList"></datalist>
+            <input type="button" id="searchItemsInput" value="Search">
+            <div id="itemsPageDown">
+                <div id="divForItem">
+                    <img src="" id="itemOutput">
+                </div>
+                <div class="spamer4"></div>
+                <div id="divForItemStats">
+                    <div id="itemStatsHeader">
+                     
+                    </div>
+                    <div id="divForName2">
+                     
+                    </div>
+                    <div id="divForID2">
+                      
+                    </div>
+                    <div id="divForhardness2">
+                     
+                    </div>
+                    <div id="divForfilterLight2">
+                       
+                    </div>
+                    <div id="divForStack2">
+                    
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+    </body>
+    <script type="text/javascript" src="JSON/Blocks.json"></script>
+    <script type="text/javascript" src="JSON/Entities.json"></script>
+    <script src="script.js"></script>
+</html>
